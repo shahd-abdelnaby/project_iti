@@ -1,28 +1,26 @@
-<div class="vehicle-card" data-id="${vehicle.id}">
-  <div class="car-image">${vehicle.image}</div>
-  <div class="vehicle-info">
-      <div class="vehicle-name">${vehicle.name}</div>
-      <div class="vehicle-price">
-          $${vehicle.price}
-          <span class="price-period">${vehicle.period}</span>
-      </div>
-  </div>
-  <div class="vehicle-specs">
-      <div class="spec-item">
-          <div class="spec-icon"></div>
-          ${vehicle.passengers} Passengers
-      </div>
-      <div class="spec-item">
-          <div class="spec-icon"></div>
-          ${vehicle.bags} Bags
-      </div>
-      <div class="spec-item">
-          <div class="spec-icon"></div>
-          ${vehicle.transmission}
-      </div>
-  </div>
-  <div class="action-buttons">
-      <button class="btn btn-secondary" onclick="viewDetails(${vehicle.id})">View Details</button>
-      <button class="btn btn-primary" onclick="bookNow(${vehicle.id})">Book Now</button>
-  </div>
+<div class="car-image">${vehicle.image}</div>
+<div class="vehicle-info">
+    <div class="vehicle-name">${vehicle.name}</div>
+    <div class="vehicle-price">
+        $${vehicle.price}
+        <span class="price-period">${vehicle.period}</span>
+    </div>
+</div>
+<div class="vehicle-specs">
+    <div class="spec-item">
+        <div class="spec-icon"></div>
+        ${vehicle.passengers} Passengers
+    </div>
+    <div class="spec-item">
+        <div class="spec-icon"></div>
+        ${vehicle.bags} Bags
+    </div>
+    <div class="spec-item">
+        <div class="spec-icon"></div>
+        ${vehicle.transmission}
+    </div>
+</div>
+<div class="action-buttons">
+    <button class="btn btn-secondary" onclick="viewDetails(${vehicle.id})">View Details</button>
+    <button class="btn btn-primary" onclick="bookNow(${vehicle.id})">Book Now</button>
 </div>

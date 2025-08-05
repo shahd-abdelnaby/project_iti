@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Welcome to my project</h1>
-    <p>This is a simple HTML page.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+      <h1>Welcome to my project</h1>
+      <p>This is a simple HTML page.</p>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+      // Function to load components
+      const loadComponent = (url, elementId) => {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+            // If the header is loaded, run the highlight function
+            if (elementId === "header") {
+              highlightActiveLink();
+            }
+          });
+      };
+
+      // Load header and footer
+      loadComponent("components/header.html", "header");
+
+      loadComponent("components/footer.html", "footer");
+    </script>
+  </body>
 </html>

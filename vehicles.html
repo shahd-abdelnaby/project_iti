@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - Select a Vehicle</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+      <h1 class="page-title">Select a vehicle group</h1>
+
+      <!-- Vehicle Tabs -->
+      <div class="vehicle-tabs">
+        <button class="tab-btn active" data-category="all">All Groups</button>
+        <button class="tab-btn" data-category="suv">Big SUV</button>
+        <button class="tab-btn" data-category="crossover">Big Crossover</button>
+        <button class="tab-btn" data-category="sedan">Big Sedan</button>
+        <button class="tab-btn" data-category="van">Big Van</button>
+        <button class="tab-btn" data-category="premium">Premium</button>
+      </div>
+
+      <!-- Vehicle Grid -->
+      <div class="vehicle-grid" id="vehicleGrid">
+        <!-- Vehicles will be populated by JavaScript -->
+      </div>
+
+      <!-- Brand Logos -->
+      <div class="brand-logos">
+        <div class="brand-logo">TOYOTA</div>
+        <div class="brand-logo">FORD</div>
+        <div class="brand-logo">MERCEDES</div>
+        <div class="brand-logo">JEEP</div>
+        <div class="brand-logo">BMW</div>
+        <div class="brand-logo">AUDI</div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Function to load components
+      const loadComponent = (url, elementId) => {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+            // If the header is loaded, run the highlight function
+            if (elementId === "header") {
+              highlightActiveLink();
+            }
+          });
+      };
+
+      // Load header and footer
+      loadComponent("components/header.html", "header");
+      loadComponent("components/footer.html", "footer");
+    </script>
+  </body>
+</html>
