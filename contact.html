@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./src/css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+    />
+  </head>
+  <body>
+    <!-- contact us section -->
+    <div class="title pt-3 lg:text-5xl">
+      <h1 class="capitalize text-center mt-2">contact us</h1>
+      <div class="pre text-center">
+        <span class="preTitle cursor-pointer">Home/</span
+        ><span class="preTitle cursor-pointer">Contact Us</span>
+      </div>
+    </div>
+
+    <!-- Booking Section -->
+    <div
+      class="mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6 "
+    >
+      <div
+        class="bg-[#5937E0] text-white rounded-xl pt-8 md:pt-16 space-y-4 w-full max-w-md mx-auto md:w-[416px] md:h-[490px] md:mx-36 text-center"
+      >
+        <h2 class="text-xl font-bold pb-3 text-center">Book your car</h2>
+        <select
+          id="carTypeInput"
+          class="w-[360px] h-[40px] p-2 rounded-2xl text-white bg-purple-700"
+        >
+          <option value="default">Car type</option>
+          <option value="mercedes-sedan">Mercedes-sedan</option>
+          <option value="mercedes-suv">Mercedes-suv</option>
+          <option value="mercedes-premium">Mercedes-premium</option>
+          <option value="porsche-premium">Porsche-premium</option>
+          <option value="toyota-crossover">Toyota-crossover</option>
+          <option value="mercedes-van">Mercedes-van</option>
+          <option value="toyota-sedan">Toyota-sedan</option>
+          <option value="maybach-premium">Maybach-premium</option>
+        </select>
+        <select
+          id="rentalPlace"
+          class="w-[360px] h-[40px] p-2 rounded-2xl text-white bg-purple-700"
+        >
+          <option>Place of rental</option>
+          <option>Zamalek</option>
+          <option>Maadi</option>
+          <option>Nasr City</option>
+          <option>Downtown Cairo</option>
+          <option>Mohandessin</option>
+          <option>Dokki</option>
+          <option>Giza</option>
+          <option>New Cairo</option>
+          <option>Obour City</option>
+          <option>Shubra</option>
+          <option>El Rehab</option>
+          <option>6th of October City</option>
+        </select>
+        <select
+          id="returnPlace"
+          class="w-[360px] h-[40px] p-2 rounded-2xl text-white bg-purple-700"
+        >
+          <option>Place of return</option>
+          <option>Zamalek</option>
+          <option>Maadi</option>
+          <option>Nasr City</option>
+          <option>Downtown Cairo</option>
+          <option>Mohandessin</option>
+          <option>Dokki</option>
+          <option>Giza</option>
+          <option>New Cairo</option>
+          <option>Obour City</option>
+          <option>Shubra</option>
+          <option>El Rehab</option>
+          <option>6th of October City</option>
+        </select>
+
+        <input
+          id="rentalDate"
+          type="date"
+          class="w-[360px] h-[38px] p-2 rounded-2xl text-white bg-purple-700"
+        />
+
+        <input
+          id="returnDate"
+          type="date"
+          class="w-[360px] h-[38px] p-2 rounded-2xl text-white bg-purple-700"
+          placeholder="Return date"
+        />
+        <button
+          id="bookNowBtn"
+          class="w-[360px] h-[40px] bg-[#FF9E0C] text-white py-2 rounded-2xl hover:bg-orange-500 cursor-pointer"
+        >
+          Book now
+        </button>
+      </div>
+      <div
+        id="carImage"
+        class="rounded-xl bg-cover bg-center h-64 md:h-auto"
+        style="
+          background-image: url('./src/images/22124bcfd303fe6ed4c56d7e9052d896.png');
+        "
+      >
+        <div class="h-full w-full rounded-xl"></div>
+      </div>
+    </div>
+
+    <!--contacts -->
+    <div
+      class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mt-16 mb-16 px-4"
+    >
+      <!-- Address -->
+      <div
+        class="flex items-center space-x-3 w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+      >
+        <span
+          class="bg-orange-500 rounded-full p-3 flex items-center justify-center flex-shrink-0"
+        >
+          <!-- Location Icon (Heroicons: map-pin) -->
+          <i class="fa-solid fa-location-dot h-6 w-6 text-white icons"></i>
+        </span>
+        <div>
+          <div class="text-gray-500 font-medium">Address</div>
+          <div class="font-bold text-black">Oxford Ave. Cary, NC 27511</div>
+        </div>
+      </div>
+      <!-- Email -->
+      <div
+        class="flex items-center space-x-3 w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+      >
+        <span
+          class="bg-orange-500 rounded-full p-3 flex items-center justify-center flex-shrink-0"
+        >
+          <!-- Email Icon (Heroicons: envelope) -->
+          <i class="fa-solid fa-envelope h-6 w-6 text-white icons"></i>
+        </span>
+        <div>
+          <div class="text-gray-500 font-medium">Email</div>
+          <div class="font-bold text-black">nwiger@yahoo.com</div>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div
+        class="flex items-center space-x-3 w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+      >
+        <span
+          class="bg-orange-500 rounded-full p-3 flex items-center justify-center flex-shrink-0"
+        >
+          <!-- Phone Icon (Heroicons: phone) -->
+          <i class="fa-solid fa-phone h-6 w-6 text-white icons"></i>
+        </span>
+        <div>
+          <div class="text-gray-500 font-medium">Phone</div>
+          <div class="font-bold text-black">+537 547-6401</div>
+        </div>
+      </div>
+      <!-- Opening Hours -->
+      <div
+        class="flex items-center space-x-3 w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+      >
+        <span
+          class="bg-orange-500 rounded-full p-3 flex items-center justify-center flex-shrink-0"
+        >
+          <!-- Clock Icon (Heroicons: clock) -->
+          <i class="fa-solid fa-clock h-6 w-6 text-white icons"></i>
+        </span>
+        <div>
+          <div class="text-gray-500 font-medium">Opening hours</div>
+          <div class="font-bold text-black">Sun-Mon: 10am - 10pm</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vlogs -->
+    <div class="max-w-full mx-auto px-6 py-1 mb-6">
+      <div class="text-center mb-10">
+        <h1 class="lg:text-5xl title pt-3">Latest blog posts & news</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-6">
+        <!-- Card 1 -->
+        <article class="shadow-2xl">
+          <div class="w-full aspect-video">
+            <video
+              class="w-full h-full object-cover rounded-2xl"
+              controls
+              muted
+              preload="metadata"
+            >
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">How To Choose The Right Car</h3>
+            <p class="text-sm text-gray-500 mt-2">News / 12April 2024</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="shadow-2xl">
+          <div class="w-full aspect-video">
+            <video
+              class="w-full h-full object-cover rounded-2xl"
+              controls
+              muted
+              preload="metadata"
+            >
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Which plan is right for me?</h3>
+            <p class="text-sm text-gray-500 mt-2">News / 12April 2024</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="shadow-2xl">
+          <div class="w-full aspect-video">
+            <video
+              class="w-full h-full object-cover rounded-2xl"
+              controls
+              muted
+              preload="metadata"
+            >
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Enjoy Speed, Choice &Control</h3>
+            <p class="text-sm text-gray-500 mt-2">News / 12April 2024</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div
+      id="notificationContainer"
+      class="fixed top-4 right-4 z-50 space-y-2"
+    ></div>
+
+    <script src="src/js/contact.js"></script>
+  </body>
+</html>
