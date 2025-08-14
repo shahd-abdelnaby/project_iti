@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="./dist/output.css" />
     <link rel="stylesheet" href="./src/css/contact.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <link
       rel="stylesheet"
       href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
@@ -24,6 +26,8 @@
     />
   </head>
   <body id="contact">
+    <div id="header"></div>
+
     <!-- contact us section -->
     <div class="title pt-3 lg:text-5xl">
       <h1 class="capitalize text-center mt-2">contact us</h1>
@@ -262,7 +266,26 @@
       id="notificationContainer"
       class="fixed top-4 right-4 z-50 space-y-2"
     ></div>
+    <div id="footer"></div>
+    <script>
+      // Function to load components
+      const loadComponent = (url, elementId) => {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+            // If the header is loaded, run the highlight function
+            if (elementId === "header") {
+              highlightActiveLink();
+            }
+          });
+      };
 
+      // Load header and footer
+      loadComponent("components/header.html", "header");
+
+      loadComponent("components/footer.html", "footer");
+    </script>
     <script src="src/js/contact.js"></script>
   </body>
 </html>
